@@ -11,7 +11,7 @@
 過濾原陣列資料，將篩選結果為`true`的資料組成新陣列回傳。
 
 ```
-// 篩選出世紀出生的發明家
+// 篩選出16世紀出生的發明家
 
 const ans1 = inventors.filter(
    (inventor) => inventor.year >= 1500 && inventor.year < 1600
