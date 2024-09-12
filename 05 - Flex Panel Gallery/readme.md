@@ -1,5 +1,7 @@
 # Day 05 - Flex Panel Gallery
 
+DEMO：https://ayating.github.io/JavaScript30/05%20-%20Flex%20Panel%20Gallery/index-done.html
+
 ## 目標
 
 完成點擊畫面觸動文字位移及畫面大小變化的效果。
@@ -31,17 +33,17 @@ flex: 1 0 auto;
 ```
 
 .panel > *:first-child {
-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 /* 選擇 class 為 'panel' 的元素的第一個直接子元素，無論這個子元素是什麼類型。 */
 .panel.open-active > *:first-child {
-transform: translateY(0%);
+    transform: translateY(0%);
 }
 .panel > *:last-child {
-transform: translateY(100%);
+    transform: translateY(100%);
 }
 .panel.open-active > *:last-child {
-transform: translateY(0);
+    transform: translateY(0);
 }
 ```
 
@@ -53,12 +55,12 @@ transform: translateY(0);
 
 ```
 function transitionedHandler(e) {
-if (e.propertyName.includes("flex")) {
-    this.classList.toggle("open-active");
-}
+    if (e.propertyName.includes("flex")) {
+        this.classList.toggle("open-active");
+    }
 }
 
 panels.forEach((panel) =>
-panel.addEventListener("transitionend", transitionedHandler)
+    panel.addEventListener("transitionend", transitionedHandler)
 );
 ```
