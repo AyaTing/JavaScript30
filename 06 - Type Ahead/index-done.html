@@ -36,7 +36,7 @@
 
       function displayMatches() {
         if (this.value.trim() === "") {
-          // 如果輸入框沒有輸入，則恢復到初始狀態
+          // 如果輸入框是空的，則恢復到初始狀態
           suggestions.innerHTML = `
             <li>Filter for a city</li>
             <li>or a state</li>
@@ -45,7 +45,6 @@
         }
 
         const matchArray = findMatches(this.value, cities);
-        console.log(matchArray);
         const html = matchArray
           .map((place) => {
             const regex = new RegExp(this.value, "gi");
