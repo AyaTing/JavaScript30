@@ -1,6 +1,6 @@
 # Day 06 - Type Ahead
 
-[DEMO](https://ayating.github.io/JavaScript30/06%20-%20Type%20Ahead/index-done.html)
+## [DEMO](https://ayating.github.io/JavaScript30/06%20-%20Type%20Ahead/index-done.html)
 
 ## 目標
 
