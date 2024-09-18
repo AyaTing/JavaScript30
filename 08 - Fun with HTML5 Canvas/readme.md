@@ -86,7 +86,7 @@ canvas.addEventListener("mousemove", (e) => {
 });
 ```
 
-3. 如何加入線條變化效果？
+4. 如何加入線條變化效果？
 
 - 顏色變化
 
