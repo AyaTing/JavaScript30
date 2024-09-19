@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <p onClick="makeGreen()">BREAK DOWN! <br />Check the JavaScript Console!</p>
+
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 },
+      ];
+
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
+
+      let console = {
+        isDev: true,
+        log(...args) {
+          if (!this.isDev) return;
+          window.console.log(...args);
+        },
+        warn(...args) {
+          if (!this.isDev) return;
+          window.console.warn(...args);
+        },
+        error(...args) {
+          if (!this.isDev) return;
+          window.console.error(...args);
+        },
+        info(...args) {
+          if (!this.isDev) return;
+          window.console.info(...args);
+        },
+        assert(...args) {
+          if (!this.isDev) return;
+          window.console.assert(...args);
+        },
+        clear() {
+          if (!this.isDev) return;
+          window.console.clear();
+        },
+        dir(...args) {
+          if (!this.isDev) return;
+          window.console.dir(...args);
+        },
+        groupCollapsed(...args) {
+          if (!this.isDev) return;
+          window.console.groupCollapsed(...args);
+        },
+        groupEnd(...args) {
+          if (!this.isDev) return;
+          window.console.groupEnd(...args);
+        },
+        count(...args) {
+          if (!this.isDev) return;
+          window.console.count(...args);
+        },
+        time(...args) {
+          if (!this.isDev) return;
+          window.console.time(...args);
+        },
+        timeEnd(...args) {
+          if (!this.isDev) return;
+          window.console.timeEnd(...args);
+        },
+        table(...args) {
+          if (!this.isDev) return;
+          window.console.table(...args);
+        },
+      };
+
+      // Regular
+
+      console.log("hello");
+
+      // Interpolated
+
+      console.log("My name is %s", "Aya"); // %s 是字串
+      console.log("I have %f dollors", 3.45); // %f 是浮點數
+      console.log("I have %d dollors", 3.45); //  %d 是整數
+
+      let name = "Aya";
+      console.log(`My name is ${name}`); // 現在通常用template string取代
+
+      // Styled
+
+      console.log(
+        "%c Hello!",
+        "font-size:40px; color:#BADA55; text-shadow: 10px 10px 0 grey"
+      );
+
+      // warning!
+
+      console.warn("住手！");
+
+      // Error :|
+
+      console.error("糟了");
+
+      // Info
+
+      console.info("這是一個廣告");
+
+      // Testing
+
+      console.assert(false, "That is wrong!-1");
+      console.assert(null, "That is wrong!-2");
+      console.assert(0, "That is wrong!-3");
+      console.assert("", "That is wrong!-4");
+      console.assert(undefined, "That is wrong!-5");
+      console.assert(true, "That is wrong!-6");
+      console.assert(NaN, "That is wrong!-7");
+
+      // clearing
+      // command + K
+      // console.clear();
+
+      // Viewing DOM Elements
+
+      let p = document.querySelector("p");
+      console.log(p);
+      console.dir(p); // 顯示p的屬性結構
+      console.dir(console); // 顯示console的屬性結構
+      console.dir(dogs); // 顯示dogs陣列內的元素結構
+
+      // Grouping together
+
+      dogs.forEach((dog) => {
+        console.groupCollapsed(`${dog.name}`);
+        console.log(`This is ${dog.name}`);
+        console.log(`${dog.name} is ${dog.age} years old`);
+        console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+        console.groupEnd(`${dog.name}`);
+      });
+
+      // counting
+
+      console.count("Wes");
+      console.count("Wes");
+      console.count("Steve");
+      console.count("Steve");
+      console.count("Wes");
+      console.count("Steve");
+      console.count("Wes");
+      console.count("Steve");
+      console.count("Steve");
+      console.count("Steve");
+      console.count("Steve");
+      console.count("Steve");
+
+      // timing
+      {
+        console.time("test 1");
+        let i;
+        let j;
+        for (i = 0; i < 10000000; i++) {
+          j = i;
+        }
+        console.timeEnd("test 1");
+      }
+      {
+        console.time("test 2");
+        for (let i = 0; i < 10000000; i++) {
+          let j = i;
+        }
+        console.timeEnd("test 2");
+      }
+
+      // table
+
+      console.table(dogs, "name");
+    </script>
+  </body>
+</html>
