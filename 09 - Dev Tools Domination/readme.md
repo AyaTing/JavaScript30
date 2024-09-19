@@ -1,6 +1,6 @@
 # Day 09 - Dev Tools Domination
 
-## [DEMO](https://ayating.github.io/JavaScript30/Day%2009%20-%20Dev%20Tools%20Domination/index-done.html)
+## [DEMO](https://ayating.github.io/JavaScript30/09%20-%20Dev%20Tools%20Domination/index-done.html)
 
 ## 目標
 
