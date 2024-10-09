@@ -82,7 +82,7 @@
 
       const hours = Math.floor(secondLeft / 3600);
       const mins = Math.floor((secondLeft % 3600) / 60);
-      const secs = Math.floor((secondLeft % 3600) % 60);
+      const secs = secondLeft % 60;
 
       const formatTime = (time) => (time < 10 ? `0${time}` : time);
       const total = `${formatTime(hours)}:${formatTime(mins)}:${formatTime(
