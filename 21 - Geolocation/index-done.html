@@ -48,6 +48,7 @@
       </g>
     </svg>
 
+    <h1 class="coordinates"></h1>
     <h1 class="speed">
       <span class="speed-value">0</span>
       <span class="units">KM/H</span>
@@ -85,13 +86,13 @@
 
       h1 {
         color: white;
-        font-weight: 100;
-        font-size: 60px;
+        font-weight: 200;
+        font-size: 25px;
         display: flex;
         align-items: center;
+        margin-bottom: 0;
       }
 
-      .speed-value,
       .units {
         font-size: 15px;
       }
@@ -101,10 +102,14 @@
       const arrow = document.querySelector(".arrow");
       const speed = document.querySelector(".speed-value");
       const units = document.querySelector(".units");
+      const coordinates = document.querySelector(".coordinates");
 
       navigator.geolocation.watchPosition(
         (data) => {
           console.log(data);
+          let latitude = data.coords.latitude.toFixed(2);
+          let longitude = data.coords.longitude.toFixed(2);
+          coordinates.textContent = `座標：[${latitude}, ${longitude}]`;
           if (data.coords.speed !== null) {
             speed.textContent = data.coords.speed;
           } else {
