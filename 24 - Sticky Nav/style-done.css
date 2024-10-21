@@ -31,7 +31,7 @@ header {
   text-align: center;
   height: 50vh;
   background: url(https://images.unsplash.com/photo-1649785181184-db56c56effcd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-    top center no-repeat;
+    center no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -49,7 +49,7 @@ nav {
   top: 0;
   width: 100%;
   transition: all 0.5s;
-  position: relative;
+  position: sticky;
   z-index: 1;
 }
 
@@ -75,6 +75,10 @@ li.logo {
   transition: all 0.5s;
   font-weight: 600;
   font-size: 30px;
+}
+
+nav.sticky .logo {
+  max-width: 500px;
 }
 
 li.logo a {
