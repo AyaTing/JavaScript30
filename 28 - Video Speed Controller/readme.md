@@ -1,4 +1,4 @@
-# 28 - Video Speed Controller
+# Day 28 - Video Speed Controller
 
 ## [DEMO](https://ayating.github.io/JavaScript30/28%20-%20Video%20Speed%20Controller/index-done.html)
 
