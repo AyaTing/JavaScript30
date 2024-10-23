@@ -50,6 +50,7 @@
       }
 
       function handleDrag(e) {
+        e.preventDefault();
         if (!isDragging) return;
         const move = (e.pageX - slider.offsetLeft - startX) * 4; // 調整移動速率，提升流暢感
         slider.scrollLeft = scrollLeft - move;
