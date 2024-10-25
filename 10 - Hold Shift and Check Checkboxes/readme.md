@@ -17,15 +17,17 @@
 
 1. 取得所有 Checkbox 元素
 
-取得 Checkbox 元素後，將其轉為陣列，以利後續用陣列的方法進行操作。
+   取得 Checkbox 元素後，將其轉為陣列，以利後續用陣列的方法進行操作。
 
-```
-const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+```js
+const checkboxes = Array.from(
+  document.querySelectorAll('input[type="checkbox"]')
+);
 ```
 
 2. 實現按住 Shift 多重選取的功能
 
-```
+```js
 function handleCheck(e) {
   // 如果目前的 checkbox 被勾選
   if (this.checked) {
@@ -45,7 +47,6 @@ function handleCheck(e) {
 
     // 更新最後勾選的 checkbox 索引
     lastCheckedIdx = currentIdx;
-
   } else {
     // 如果 checkbox 被取消勾選，重置 lastCheckedIdx
     lastCheckedIdx = null;

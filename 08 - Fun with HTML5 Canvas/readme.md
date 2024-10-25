@@ -1,4 +1,4 @@
-# Day 08 - Fun with HTML5 Canvas
+# Day 8 - Fun with HTML5 Canvas
 
 ## [DEMO](https://ayating.github.io/JavaScript30/08%20-%20Fun%20with%20HTML5%20Canvas/index-done.html)
 
@@ -17,9 +17,9 @@
 
 1. 設定滑鼠事件
 
-我們需要用滑鼠來控制何時開始繪圖，使用`mousedown`偵測滑鼠控制開始繪圖，並利用`mouseup`或`mouseleave`來結束繪圖：
+   我們需要用滑鼠來控制何時開始繪圖，使用`mousedown`偵測滑鼠控制開始繪圖，並利用`mouseup`或`mouseleave`來結束繪圖：
 
-```
+```js
 let canvas = document.querySelector("#draw");
 let drawing = false;
 canvas.addEventListener("mousedown", (e) => {
@@ -39,9 +39,9 @@ canvas.addEventListener("mouseleave", (e) => {
 
 2. 畫布基本設定
 
-使用 canvas 的方法`getContext`來取得渲染環境及其繪圖函數，這次我們要製作 2D 繪圖的畫布，故在參數輸入`"2d"`。
+   使用 canvas 的方法`getContext`來取得渲染環境及其繪圖函數，這次我們要製作 2D 繪圖的畫布，故在參數輸入`"2d"`。
 
-```
+```js
 let canvas = document.querySelector("#draw");
 let ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -50,11 +50,11 @@ canvas.height = window.innerHeight;
 
 3. 如何產生繪圖效果？
 
-利用兩點連成一線的方式，將滑鼠移動的路徑繪製成線條。
+   利用兩點連成一線的方式，將滑鼠移動的路徑繪製成線條。
 
 - 線條初始設定
 
-```
+```js
 let x = 0,
 y = 0;
 ctx.lineCap = "round"; // 設定端點圓滑
@@ -66,7 +66,7 @@ ctx.lineWidth = 50; // 設定線條初始粗細
 
 - 監聽 mousedown 事件來設定初始點
 
-```
+```js
 canvas.addEventListener("mousedown", (e) => {
   drawing = true;
   [x, y] = [e.offsetX, e.offsetY]; // 設定初始座標
@@ -75,7 +75,7 @@ canvas.addEventListener("mousedown", (e) => {
 
 - 監聽 mousemove 事件來繪製線條
 
-```
+```js
 canvas.addEventListener("mousemove", (e) => {
   if (!drawing) return;
   ctx.beginPath(); // 開始新的路徑
@@ -90,9 +90,9 @@ canvas.addEventListener("mousemove", (e) => {
 
 - 顏色變化
 
-使用 HSL 色彩模型來讓線條顏色隨著繪製過程逐漸改變，每次繪製時增加色相，達到 360 後重置為 0。
+  使用 HSL 色彩模型來讓線條顏色隨著繪製過程逐漸改變，每次繪製時增加色相，達到 360 後重置為 0。
 
-```
+```js
 let hue = 0;
 
 canvas.addEventListener("mousemove", (e) => {
@@ -101,21 +101,20 @@ canvas.addEventListener("mousemove", (e) => {
 });
 ```
 
-其他寫法：求餘數的運算，可以使值保持在 0 到 359 的範圍內。
+- 其他寫法：求餘數的運算，可以使值保持在 0 到 359 的範圍內。
+  例如：
+  當 hue 是 359 時，加 1 變成 360，360 % 360 = 0，所以 hue 變成 0。
+  當 hue 是 120 時，加 1 變成 121，121 % 360 = 121，所以 hue 還是 121。
 
-例如：
-當 hue 是 359 時，加 1 變成 360，360 % 360 = 0，所以 hue 變成 0。
-當 hue 是 120 時，加 1 變成 121，121 % 360 = 121，所以 hue 還是 121。
-
-```
+```js
 hue = (hue + 1) % 360;
 ```
 
 - 線條粗細變化
 
-設定一個變數來控制遞增遞減的方向，當達到最大或最小值時，反轉變化方向。
+  設定一個變數來控制遞增遞減的方向，當達到最大或最小值時，反轉變化方向。
 
-```
+```js
 let lineWidth = 50;
 let lineWidthChange = -1;
 
