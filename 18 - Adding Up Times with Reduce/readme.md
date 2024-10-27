@@ -18,28 +18,28 @@
 
 - [...li] 展開運算子
 
-```
+```js
 const li = document.querySelectorAll("li");
-const seconds = [...li]
+const seconds = [...li];
 ```
 
 - Array.from
 
-```
+```js
 const li = document.querySelectorAll("li");
 const seconds = Array.from(li);
 ```
 
 - [].map.call(li, (item) => item)
 
-```
-const li = document.querySelectorAll('li');
+```js
+const li = document.querySelectorAll("li");
 const seconds = [].map.call(li, (item) => item);
 ```
 
 - [].map.apply(li, [(item) => item])： `apply()`的使用場景跟`call()`類似，但它允許我們以一個陣列的形式傳遞參數，而不是逐一傳遞。
 
-```
-const li = document.querySelectorAll('li');
+```js
+const li = document.querySelectorAll("li");
 const seconds = [].map.apply(li, [(item) => item.dataset.time]);
 ```

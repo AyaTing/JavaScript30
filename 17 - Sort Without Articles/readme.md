@@ -26,7 +26,7 @@
 
 - replace()：不會改變陣列中的原始名稱，它只是對每個項目應用正則表達式後返回修改過的結果。
 
-```
+```js
 function strip(bandName) {
   return bandName.replace(/^(a |the |an )/i, "").trim();
 }
