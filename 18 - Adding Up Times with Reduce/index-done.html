@@ -6,6 +6,7 @@
     <link rel="icon" href="https://fav.farm/🔥" />
   </head>
   <body>
+    <h1></h1>
     <ul class="videos">
       <li data-time="5:43">Video 1</li>
       <li data-time="2:33">Video 2</li>
@@ -68,6 +69,7 @@
     </ul>
     <script>
       const li = document.querySelectorAll("li");
+      const h1 = document.querySelector("h1");
       const seconds = [...li]
         .map((node) => node.dataset.time)
         .map((time) => {
@@ -88,6 +90,7 @@
       const total = `${formatTime(hours)}:${formatTime(mins)}:${formatTime(
         secs
       )}`;
+      h1.textContent = `📺 The total time of all videos: ${total} 📺`;
       console.log(total);
     </script>
   </body>
