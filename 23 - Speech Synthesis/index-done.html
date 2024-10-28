@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Speech Synthesis</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <div class="voiceinator">
+      <h1>The Voiceinator 5000</h1>
+
+      <select name="voice" id="voices">
+        <option value="">Select A Voice</option>
+      </select>
+
+      <label for="rate">Rate:</label>
+      <input name="rate" type="range" min="0" max="3" value="1" step="0.1" />
+
+      <label for="pitch">Pitch:</label>
+
+      <input name="pitch" type="range" min="0" max="2" step="0.1" />
+      <textarea name="text">
+こんにちは! 今日もJavaScriptの勉強をしてたの？ 🫣</textarea
+      >
+      <button id="stop">Stop!</button>
+      <button id="speak">Speak</button>
+    </div>
+
+    <script>
+      const msg = new SpeechSynthesisUtterance();
+      let voices = [];
+      const voicesDropdown = document.querySelector('[name="voice"]');
+      const options = document.querySelectorAll(
+        '[type="range"], [name="text"]'
+      );
+      const speakButton = document.querySelector("#speak");
+      const stopButton = document.querySelector("#stop");
+
+      msg.text = document.querySelector('[name="text"]').value;
+
+      // 取得聲音選項並渲染到畫面
+      function populateVoices() {
+        voices = this.getVoices();
+        voicesDropdown.innerHTML =
+          `<option value="">Select A Voice</option>` +
+          voices
+            .filter((voice) => voice.lang.includes("ja"))
+            .map(
+              (voice) =>
+                `<option value="${voice.name}">${voice.name} (${voice.lang})</option>`
+            )
+            .join("");
+      }
+
+      function setVoice() {
+        msg.voice = voices.find((voice) => voice.name === this.value);
+      }
+
+      function toggle(startOver = true) {
+        // 提供預設值 toggle(startOver = true)
+        speechSynthesis.cancel(); // 停止任何正在進行的語音
+        if (startOver) {
+          speechSynthesis.speak(msg); // 開始新的語音
+        }
+      }
+
+      function setOption() {
+        msg[this.name] = this.value;
+      }
+
+      speechSynthesis.addEventListener("voiceschanged", populateVoices);
+      voicesDropdown.addEventListener("change", setVoice);
+      speakButton.addEventListener("click", toggle);
+      stopButton.addEventListener("click", () => toggle(false));
+      options.forEach((option) => option.addEventListener("change", setOption));
+    </script>
+  </body>
+</html>
