@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My JavaScript30 Challenges | Aya Ting</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My JavaScript30 Challenges</h1>
+      <p>
+        JavaScript30 是一個由 Wes Bos 創建的免費課程，透過完成 30
+        天的小型專案來練習 Vanilla JavaScript。
+      </p>
+      <a href="https://javascript30.com/">JS30教學課程</a>
+      <a href="https://github.com/AyaTing/JavaScript30">My Github</a>
+      <a href="https://note.com/ayating/m/me02ad56f15bd">My Blog</a>
+    </header>
+    <main>
+      <div class="carousel-buttons">
+        <button onclick="showGroup(1)">Group 1</button>
+        <button onclick="showGroup(2)">Group 2</button>
+        <button onclick="showGroup(3)">Group 3</button>
+      </div>
+      <div class="carousel-container">
+        <!-- Group 1 -->
+        <div class="carousel-group" id="group1">
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">JavaScript Drum Kit</div>
+              <div class="num">01</div>
+              <img src="/assets/day1.png" alt="Day1 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">JS and CSS Clock</div>
+              <div class="num">02</div>
+              <img src="/assets/day2.png" alt="Day2 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">CSS Variables</div>
+              <div class="num">03</div>
+              <img src="/assets/day3.png" alt="Day3 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Array Cardio Day 1</div>
+              <div class="num">04</div>
+              <img src="/assets/day4.png" alt="Day4 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Flex Panel Gallery</div>
+              <div class="num">05</div>
+              <img src="/assets/day5.png" alt="Day5 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Type Ahead</div>
+              <div class="num">06</div>
+              <img src="/assets/day6.png" alt="Day6 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Array Cardio Day 2</div>
+              <div class="num">07</div>
+              <img src="/assets/day7.png" alt="Day7 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Fun with HTML5 Canvas</div>
+              <div class="num">08</div>
+              <img src="/assets/day8.png" alt="Day8 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Dev Tools Domination</div>
+              <div class="num">09</div>
+              <img src="/assets/day9.png" alt="Day9 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Hold Shift and Check Checkboxes</div>
+              <div class="num">10</div>
+              <img src="/assets/day10.png" alt="Day10 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+        </div>
+        <!-- Group 2 -->
+        <div class="carousel-group" id="group2" style="display: none">
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Custom Video Player</div>
+              <div class="num">11</div>
+              <img src="/assets/day11.png" alt="Day11 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Key Sequence Detection</div>
+              <div class="num">12</div>
+              <img src="/assets/day12.png" alt="Day12 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Slide in on Scroll</div>
+              <div class="num">13</div>
+              <img src="/assets/day13.png" alt="Day13 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">JavaScript References VS Copying</div>
+              <div class="num">14</div>
+              <img src="/assets/day14.png" alt="Day14 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">LocalStorage</div>
+              <div class="num">15</div>
+              <img src="/assets/day15.png" alt="Day15 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Mouse Move Shadow</div>
+              <div class="num">16</div>
+              <img src="/assets/day16.png" alt="Day16 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Sort Without Articles</div>
+              <div class="num">17</div>
+              <img src="/assets/day17.png" alt="Day17 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Adding Up Times with Reduce</div>
+              <div class="num">18</div>
+              <img src="/assets/day18.png" alt="Day18 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Webcam Fun</div>
+              <div class="num">19</div>
+              <img src="/assets/day19.png" alt="Day19 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Speech Detection</div>
+              <div class="num">20</div>
+              <img src="/assets/day20.png" alt="Day20 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+        </div>
+        <!-- Group 3 -->
+        <div class="carousel-group" id="group3" style="display: none">
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Geolocation</div>
+              <div class="num">21</div>
+              <img src="/assets/day21.png" alt="Day21 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Follow Along Link Highlighter</div>
+              <div class="num">22</div>
+              <img src="/assets/day22.png" alt="Day22 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Speech Synthesis</div>
+              <div class="num">23</div>
+              <img src="/assets/day23.png" alt="Day23 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Sticky Nav</div>
+              <div class="num">24</div>
+              <img src="/assets/day24.png" alt="Day24 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">
+                Event Capture, Propagation, Bubbling and Once
+              </div>
+              <div class="num">25</div>
+              <img src="/assets/day25.png" alt="Day25 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Stripe Follow Along Nav</div>
+              <div class="num">26</div>
+              <img src="/assets/day26.png" alt="Day26 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Click and Drag</div>
+              <div class="num">27</div>
+              <img src="/assets/day27.png" alt="Day27 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Video Speed Controllerr</div>
+              <div class="num">28</div>
+              <img src="/assets/day28.png" alt="Day28 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Countdown Timer</div>
+              <div class="num">29</div>
+              <img src="/assets/day29.png" alt="Day29 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-box">
+              <div class="title">Whack A Mole</div>
+              <div class="num">30</div>
+              <img src="/assets/day30.png" alt="Day30 Image" />
+              <a class="demo-btn" href="">DEMO</a>
+              <a class="github-btn" href="">GITHUB</a>
+              <a class="note-btn" href="">NOTE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
