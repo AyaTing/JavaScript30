@@ -30,9 +30,9 @@ recognition.lang = "zh-TW";
 
 2. 如何處理語音輸入的資料？
 
-使用`recognition.addEventListener('result', callback)`來處理語音輸入結果，將語音轉換成文字，並根據使用者的語音輸入來即時更新畫面。
+   使用`recognition.addEventListener('result', callback)`來處理語音輸入結果，將語音轉換成文字，並根據使用者的語音輸入來即時更新畫面。
 
-`result`事件回傳的是類似陣列的物件`SpeechRecognitionResultList`，需將其轉換為真正的陣列，以便能使用`map`方法進行處理。
+   `result`事件回傳的是類似陣列的物件`SpeechRecognitionResultList`，需將其轉換為真正的陣列，以便能使用`map`方法進行處理。
 
 ```js
 recognition.addEventListener("result", (e) => {

@@ -40,7 +40,7 @@ function setPosition(trigger) {
 
 2. 如何解決當視窗大小改變，Highlight 區塊位置會偏移的問題？
 
-當視窗大小改變時，需要重新計算連結的位置，確保 Highlight 區塊的位置能正確對齊。透過監聽`resize`事件來動態更新區塊位置。
+   當視窗大小改變時，需要重新計算連結的位置，確保 Highlight 區塊的位置能正確對齊。透過監聽`resize`事件來動態更新區塊位置。
 
 ```js
 function resizeHandler() {

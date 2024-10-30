@@ -15,7 +15,7 @@
 
 1. 如何取得使用者位置？
 
-利用`navigator.geolocation.watchPosition`，可以持續監測使用者裝置的即時位置資訊。這個方法不僅能讓我們透過成功的 callback 來處理位置數據，同時也能設定錯誤的 callback，來應對授權不足或其他技術性問題。
+   利用`navigator.geolocation.watchPosition`，可以持續監測使用者裝置的即時位置資訊。這個方法不僅能讓我們透過成功的 callback 來處理位置數據，同時也能設定錯誤的 callback，來應對授權不足或其他技術性問題。
 
 ```JS
 navigator.geolocation.watchPosition(
