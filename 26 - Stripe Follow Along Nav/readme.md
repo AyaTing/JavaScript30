@@ -17,7 +17,7 @@
 
 1. 顯示效果的時機設定
 
-使用`setTimeout`來管理 class 狀態以控制動畫順序，防止快速移動滑鼠時造成的動畫錯亂。
+   使用`setTimeout`來管理 class 狀態以控制動畫順序，防止快速移動滑鼠時造成的動畫錯亂。
 
 - 寫法一：
 
@@ -45,8 +45,8 @@ setTimeout(
 
 2. 計算及設置展開選單的位置與大小
 
-透過`getBoundingClientRect()`來取得元素的大小及其相對於視窗的位置，計算相對位置時要減去導航列的位置，以確保展開選單相對於導航列的定位正確。
-也可以使用`transform`替代直接修改`top/left`。
+   透過`getBoundingClientRect()`來取得元素的大小及其相對於視窗的位置，計算相對位置時要減去導航列的位置，以確保展開選單相對於導航列的定位正確。
+   也可以使用`transform`替代直接修改`top/left`。
 
 ```js
 const rect = dropdown.getBoundingClientRect();
