@@ -1,14 +1,19 @@
 const groups = document.querySelectorAll(".carousel-group");
 const cards = document.querySelectorAll(".carousel-item");
 const container = document.querySelector(".carousel-container");
+const buttons = document.querySelectorAll(".carousel-buttons > button");
 
 // 切換卡片顯示組別
 const showGroup = function (groupNum) {
   groups.forEach((group) => (group.style.display = "none"));
-
+  buttons.forEach((button) => {
+    button.classList.remove("active");
+    button.style.color = "";
+  });
   // container.scrollLeft = 0;
   const selectedGroup = document.querySelector(`#group${groupNum}`);
   selectedGroup.style.display = "flex";
+  buttons[groupNum - 1].classList.add("active");
   initCarousel();
 };
 
