@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -12,6 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -21,6 +24,7 @@ header {
   align-items: center;
   justify-content: center;
   margin-bottom: 25px;
+  height: 30vh;
 }
 
 h1 {
@@ -61,6 +65,7 @@ header > p {
   font-size: 1.5rem;
   opacity: 0.8;
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .links-container {
@@ -82,8 +87,22 @@ header > p {
   opacity: 0.8;
 }
 
-.links-container a:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+.links-container a:first-child:hover {
+  background-color: #4a90e2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.links-container a:nth-child(2):hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.links-container a:nth-child(3):hover {
+  background-color: #28a745;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   opacity: 1;
@@ -91,14 +110,15 @@ header > p {
 
 main {
   display: grid;
-  margin-left: 50px;
+  margin: 0 50px;
 }
 
+/* 切換卡片組的按鈕 */
 .carousel-buttons {
   display: flex;
   gap: 20px;
-  align-self: flex-start;
-  margin-bottom: 25px;
+  margin-top: 25px;
+  justify-content: center;
 }
 
 .carousel-buttons > button {
@@ -106,85 +126,76 @@ main {
   border: none;
   cursor: pointer;
   outline: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   transition: transform 0.3s ease;
   color: aliceblue;
-  opacity: 0.6;
-}
-.carousel-buttons > button::after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background-color: aliceblue;
-  margin-top: 2px;
-  transition: width 0.3s ease;
 }
 
 .carousel-buttons > button:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
 }
 
-.carousel-buttons > button:hover::after {
-  width: 0%;
+.carousel-buttons > button.active {
+  transform: scale(1.3);
+  color: #ffc640;
 }
 
+/* 卡片輪播 */
 .carousel-container {
   width: 100%;
-  overflow-x: auto;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-group {
+  --item-width: 500px;
+  list-style: none;
   display: flex;
-  justify-content: start;
   align-items: center;
-  width: 100%;
-  gap: 30px;
-  margin-bottom: 50px;
-}
-
-.carousel-group {
-  animation: slide-basic 45s linear infinite;
-}
-
-.carousel-group:hover {
-  animation-play-state: paused;
-}
-
-@keyframes slide-basic {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(calc(-280% - 15px)); /* 10px 是 gap 的一半 */
-  }
-  100% {
-    transform: translateX(0);
-  }
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .carousel-item {
-  /* border: 1px black solid; */
-  width: 500px;
+  flex: 0 0 auto;
+  width: var(--item-width);
   height: 450px;
-  flex-shrink: 0;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  z-index: 1;
+  will-change: transform;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  scroll-snap-align: center;
 }
 
-.carousel-item:hover {
-  transform: scale(1.05);
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+.carousel-item:first-child {
+  margin-left: calc(50% - (var(--item-width) / 2));
 }
 
 /* 卡片內容 */
 .carousel-item-top {
-  width: 500px;
+  width: 100%;
   height: 350px;
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
 }
 
-.carousel-item-top > img {
+.carousel-item-top img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -192,47 +203,51 @@ main {
 
 .carousel-item-bottom {
   background: aliceblue;
-  width: 500px;
   height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-.card-name {
-  font-size: 1.5rem;
-  color: #1d2b49;
-  letter-spacing: 2px;
-}
-.card-btns {
-  display: flex;
-  gap: 20px;
-}
-.card-btns > a {
-  text-decoration: none;
-  letter-spacing: 2px;
-  padding: 0.5rem;
-  background: radial-gradient(
-    ellipse,
-    #ffd700,
-    #ffe153,
-    transparent,
-    transparent
-  );
-  cursor: pointer;
-  color: #1d2b49;
+  padding: 10px;
+  transform-style: preserve-3d;
 }
 
-.card-btns > a:hover {
-  background-image: radial-gradient(
-    ellipse,
-    transparent,
-    #fddb92,
-    #ffe153,
-    #ffd700,
-    transparent,
-    transparent,
-    transparent
-  );
-  opacity: 0.6;
+.card-name {
+  font-size: 1.2rem;
+  color: #1d2b49;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.card-btns {
+  display: flex;
+  gap: 15px;
+}
+
+.card-btns a {
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.demo-btn {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.github-btn {
+  background-color: #333;
+  color: white;
+}
+
+.note-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.card-btns a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
