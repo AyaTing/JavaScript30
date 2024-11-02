@@ -7,7 +7,7 @@ JavaScript30 是一個由 Wes Bos 創建的免費課程，透過完成 30 天的
 
 ## 我的成果
 
-- [My JavaScript30 Challenges]()（🚸 建置中）
+- [Aya's JavaScript30 Challenges](https://ayating.github.io/JavaScript30/)（🚸 持續優化中...）
 - [My Github](https://github.com/AyaTing/JavaScript30)
 - [My Blog](https://note.com/ayating/m/me02ad56f15bd)
 
