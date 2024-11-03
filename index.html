@@ -1,440 +1,445 @@
 <!DOCTYPE html>
 <html lang="zh-tw">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aya's JavaScript30 Challenges</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Aya's JavaScript30 Challenges</h1>
-      <p>
-        這是一個匯集我的JS30挑戰成果的網站。<br />
-        JS30 是一個由 Wes Bos 創建的免費課程，透過完成 30 天的小型專案來練習
-        Vanilla JS。
-      </p>
-      <div class="links-container">
-        <a href="https://javascript30.com/" target="_blank">Courses</a>
-        <a href="https://github.com/AyaTing/JavaScript30" target="_blank"
-          >My Github</a
-        >
-        <a href="https://note.com/ayating/m/me02ad56f15bd" target="_blank"
-          >My Blog</a
-        >
-      </div>
-    </header>
-    <main>
-      <div class="carousel-container">
-        <!-- Group 1 -->
-        <div class="carousel-group" id="group1">
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day1.png" alt="Day1 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">01 JavaScript Drum Kit</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aya's JavaScript30 Challenges</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Aya's JavaScript30 Challenges</h1>
+    <p>
+      這是一個匯集我的JS30挑戰成果的網站。<br />
+      JS30 是一個由 Wes Bos 創建的免費課程，透過完成 30 天的小型專案來練習
+      Vanilla JS。
+    </p>
+    <div class="links-container">
+      <a href="https://javascript30.com/" target="_blank">Courses</a>
+      <a href="https://github.com/AyaTing/JavaScript30" target="_blank">My Github</a>
+      <a href="https://note.com/ayating/m/me02ad56f15bd" target="_blank">My Blog</a>
+    </div>
+  </header>
+  <main role="main">
+    <div class="carousel-container" role="region" aria-label="專案展示輪播">
+      <!-- Group 1 -->
+      <section class="carousel-group" id="group1" role="tabpanel" aria-label="第一組專案">
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day1.png" alt="Day1 JavaScript Drum Kit" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">01 JavaScript Drum Kit</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day2.png" alt="Day2 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">02 JS and CSS Clock</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day2.png" alt="Day2 JS and CSS Clock" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">02 JS and CSS Clock</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day3.png" alt="Day3 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">03 CSS Variables</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day3.png" alt="Day3 CSS Variables" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">03 CSS Variables</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day4.png" alt="Day4 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">04 Array Cardio Day 1</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day4.png" alt="Day4 Array Cardio Day 1" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">04 Array Cardio Day 1</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day5.png" alt="Day5 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">05 Flex Panel Gallery</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day5.png" alt="Day5 Flex Panel Gallery" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">05 Flex Panel Gallery</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day6.png" alt="Day6 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">06 Type Ahead</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day6.png" alt="Day6 Type Ahead" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">06 Type Ahead</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day7.png" alt="Day7 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">07 Array Cardio Day 2</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day7.png" alt="Day7 Array Cardio Day 2" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">07 Array Cardio Day 2</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day8.png" alt="Day8 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">08 Fun with HTML5 Canvas</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day8.png" alt="Day8 Fun with HTML5 Canvas" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">08 Fun with HTML5 Canvas</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day9.png" alt="Day9 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">09 Dev Tools Domination</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day9.png" alt="Day9 Dev Tools Domination" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">09 Dev Tools Domination</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day10.png" alt="Day10 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">10 Hold Shift and Check Checkboxes</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
-              </div>
+        </article>
+        <article class="carousel-item" role="article">
+          <div class="carousel-item-top">
+            <img src="./assets/day10.png" alt="Day10 Hold Shift and Check Checkboxes" />
+          </div>
+          <div class="carousel-item-bottom">
+            <div class="card-name">10 Hold Shift and Check Checkboxes</div>
+            <div class="card-btns">
+              <a class="demo-btn" href="" target="_blank">DEMO</a>
+              <a class="github-btn" href="" target="_blank">GITHUB</a>
+              <a class="note-btn" href="" target="_blank">NOTE</a>
             </div>
           </div>
-          <div class="carousel-item"></div>
-        </div>
-        <!-- Group 2 -->
-        <div class="carousel-group" id="group2" style="display: none">
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day11.png" alt="Day11 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">11 Custom Video Player</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+        </article>
+        <div class="carousel-item"></div>
+        <section>
+          <!-- Group 2 -->
+          <section class="carousel-group" id="group2" style="display: none" role="tabpanel" aria-label="第二組專案">
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day11.png" alt="Day11 Custom Video Player" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day12.png" alt="Day12 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">12 Key Sequence Detection</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">11 Custom Video Player</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day13.png" alt="Day13 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">13 Slide in on Scroll</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day12.png" alt="Day12 Key Sequence Detection" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day14.png" alt="Day14 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">14 JavaScript References VS Copying</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">12 Key Sequence Detection</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day15.png" alt="Day15 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">15 LocalStorage</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day13.png" alt="Day13 Slide in on Scroll" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day16.png" alt="Day16 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">16 Mouse Move Shadow</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">13 Slide in on Scroll</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day17.png" alt="Day17 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">17 Sort Without Articles</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day14.png" alt="Day14 JavaScript References VS Copying" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day18.png" alt="Day18 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">18 Adding Up Times with Reduce</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">14 JavaScript References VS Copying</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day19.jpeg" alt="Day19 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">19 Webcam Fun</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day15.png" alt="Day15 LocalStorage" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day20.png" alt="Day20 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">20 Speech Detection</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">15 LocalStorage</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item"></div>
-        </div>
-        <!-- Group 3 -->
-        <div class="carousel-group" id="group3" style="display: none">
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day21.png" alt="Day21 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">21 Geolocation</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day16.png" alt="Day16 Mouse Move Shadow" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day22.png" alt="Day22 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">22 Follow Along Link Highlighter</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">16 Mouse Move Shadow</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day23.png" alt="Day23 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">23 Speech Synthesis</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day17.png" alt="Day17 Sort Without Articles" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day24.png" alt="Day24 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">24 Sticky Nav</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">17 Sort Without Articles</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day25.png" alt="Day25 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">25 Event Capturing and Bubbling</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day18.png" alt="Day18 Adding Up Times with Reduce" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day26.png" alt="Day26 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">26 Stripe Follow Along Nav</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">18 Adding Up Times with Reduce</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day27.png" alt="Day27 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">27 Click and Drag</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day19.jpeg" alt="Day19 Webcam Fun" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day28.png" alt="Day28 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">28 Video Speed Controller</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">19 Webcam Fun</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day29.png" alt="Day29 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">29 Countdown Timer</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day20.png" alt="Day20 Speech Detection" />
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="carousel-item-top">
-              <img src="/assets/day30.png" alt="Day30 Image" />
-            </div>
-            <div class="carousel-item-bottom">
-              <div class="card-name">30 Whack A Mole</div>
-              <div class="card-btns">
-                <a class="demo-btn" href="" target="_blank">DEMO</a>
-                <a class="github-btn" href="" target="_blank">GITHUB</a>
-                <a class="note-btn" href="" target="_blank">NOTE</a>
+              <div class="carousel-item-bottom">
+                <div class="card-name">20 Speech Detection</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item"></div>
-        </div>
-      </div>
-      <nav class="carousel-buttons">
-        <button onclick="showGroup(1)">►</button>
-        <button onclick="showGroup(2)">►</button>
-        <button onclick="showGroup(3)">►</button>
-      </nav>
-    </main>
-    <script src="script.js"></script>
-  </body>
+            </article>
+            <div class="carousel-item"></div>
+          </section>
+          <!-- Group 3 -->
+          <section class="carousel-group" id="group3" style="display: none" role="tabpanel" aria-label="第三組專案">
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day21.png" alt="Day21 Geolocation" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">21 Geolocation</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day22.png" alt="Day22 Follow Along Link Highlighter" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">22 Follow Along Link Highlighter</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day23.png" alt="Day23 Speech Synthesis" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">23 Speech Synthesis</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day24.png" alt="Day24 Sticky Nav" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">24 Sticky Nav</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day25.png" alt="Day25 Event Capturing and Bubbling" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">25 Event Capturing and Bubbling</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day26.png" alt="Day26 Stripe Follow Along Nav" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">26 Stripe Follow Along Nav</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day27.png" alt="Day27 Click and Dra" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">27 Click and Drag</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day28.png" alt="Day28 Video Speed Controller" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">28 Video Speed Controller</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day29.png" alt="Day29 Countdown Timer" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">29 Countdown Timer</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <article class="carousel-item" role="article">
+              <div class="carousel-item-top">
+                <img src="./assets/day30.png" alt="Day30 Whack A Mole" />
+              </div>
+              <div class="carousel-item-bottom">
+                <div class="card-name">30 Whack A Mole</div>
+                <div class="card-btns">
+                  <a class="demo-btn" href="" target="_blank">DEMO</a>
+                  <a class="github-btn" href="" target="_blank">GITHUB</a>
+                  <a class="note-btn" href="" target="_blank">NOTE</a>
+                </div>
+              </div>
+            </article>
+            <div class="carousel-item"></div>
+          </section>
+    </div>
+    <nav class="carousel-buttons" role="navigation" aria-label="輪播導航">
+      <button onclick="showGroup(1)" role="button" aria-label="顯示第 1-10 天專案">
+        ►
+      </button>
+      <button onclick="showGroup(2)" role="button" aria-label="顯示第 11-20 天專案">
+        ►
+      </button>
+      <button onclick="showGroup(3)" role="button" aria-label="顯示第 21-30 天專案">
+        ►
+      </button>
+    </nav>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>
