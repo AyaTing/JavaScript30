@@ -14,7 +14,7 @@ const showGroup = function (groupNum) {
   const selectedGroup = document.querySelector(`#group${groupNum}`);
   selectedGroup.style.display = "flex";
   buttons[groupNum - 1].classList.add("active");
-  initCarousel();
+  setTimeout(rotateCards, 50);
 };
 
 // 卡片輪播功能
@@ -58,7 +58,8 @@ function initCarousel() {
     card.style.position = "relative";
     card.style.willChange = "transform, opacity";
   });
-  rotateCards();
+  buttons[0].classList.add("active");
+  setTimeout(rotateCards, 50);
 }
 
 container.addEventListener("scroll", rotateCards);
