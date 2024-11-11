@@ -50,3 +50,40 @@ function bonk(e) {
 }
 moles.forEach((mole) => mole.addEventListener("click", bonk));
 ```
+
+3. 補充作法（運用 Proxy）
+
+   透過 Proxy 來控制地鼠出現的狀態，並在地鼠的狀態改變時能自動控制其顯示和觸發事件監聽。亦能夠透過隔離地鼠的狀態，避免玩家作弊（若需完全防止，仍須設置`isTrusted`的判斷或其他驗證方式）。
+
+   - Proxy 的 get 方法：攔截屬性的讀取操作。
+   - Proxy 的 set 方法：攔截屬性的賦值操作。
+
+```js
+const status = moles.reduce((prev, current, index) => {
+  prev[index] = false;
+  return prev;
+}, {});
+
+const molesProxy = new Proxy(status, {
+  get(target, key) {
+    return target[key];
+  },
+  set(target, key, value) {
+    target[key] = value;
+    moles[key].removeEventListener("click", bonk);
+    if (value) {
+      moles[key].addEventListener("click", bonk);
+      moles[key].classList.add("up");
+    } else {
+      moles[key].classList.remove("up");
+    }
+  },
+});
+
+const bonk = function () {
+  if (molesProxy[moles.indexOf(this)]) {
+    setScore(score + 1);
+    molesProxy[moles.indexOf(this)] = false;
+  }
+};
+```
